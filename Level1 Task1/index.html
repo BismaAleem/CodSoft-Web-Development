@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matco Foods</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wgt@100;200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <img src="logo.jpg" alt="">
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">SERVICES</a></li>
+                    <li><a href="">CONTACT US</a></li>
+
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>SOUTH ASIA's LARGEST AGRIBUSINESS</h1>
+            <h4>Discover the future of rice variety analysis at Rice Grain Variety Analysis, where advanced machine
+                learning algorithms unravel the unique characteristics of each grain. </h4>
+
+        </div>
+        <div class="container">
+            <input type="file" accept="image/*" id="fileInput" onchange="displayFileName()">
+            <label for="fileInput" id="chooseFileButton" class="button">Upload image</label>
+            <p id="fileName"></p>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+
+        </div>
+        <p>@copyright by Bisma </p>
+    </section>
+    
+ <script>
+    function displayFileName() {
+        const fileInput = document.getElementById('fileInput');
+        const fileNameDisplay = document.getElementById('fileName');
+        
+        if (fileInput.files.length > 0) {
+            const fileName = fileInput.files[0].name;
+            fileNameDisplay.textContent = `File Selected: ${fileName}`;
+        } else {
+            fileNameDisplay.textContent = "";
+        }
+    }
+</script>
+
+    
+      
+
+</body>
+
+</html>
